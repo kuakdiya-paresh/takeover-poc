@@ -1,2 +1,171 @@
-<h1>Security Research PoC</h1>
-<p>Authorized subdomain takeover validation for beta.grainecosystem.com</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Security Research PoC</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #1f2937, #020617 65%);
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .glow {
+      position: absolute;
+      width: 450px;
+      height: 450px;
+      background: #00f5ff;
+      filter: blur(160px);
+      opacity: 0.25;
+      top: -100px;
+      left: -100px;
+    }
+
+    .glow2 {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: #ff007a;
+      filter: blur(150px);
+      opacity: 0.25;
+      bottom: -100px;
+      right: -100px;
+    }
+
+    .card {
+      position: relative;
+      z-index: 2;
+      width: 90%;
+      max-width: 850px;
+      padding: 45px;
+      border-radius: 24px;
+      background: rgba(15, 23, 42, 0.82);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 0 60px rgba(0, 245, 255, 0.18);
+      text-align: center;
+      backdrop-filter: blur(14px);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: rgba(0, 245, 255, 0.12);
+      border: 1px solid rgba(0, 245, 255, 0.45);
+      color: #67e8f9;
+      font-weight: bold;
+      margin-bottom: 25px;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      font-size: 52px;
+      margin-bottom: 15px;
+      background: linear-gradient(90deg, #00f5ff, #ffffff, #ff007a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 22px;
+      color: #e5e7eb;
+    }
+
+    .name {
+      color: #22d3ee;
+      font-weight: bold;
+      text-shadow: 0 0 18px rgba(34, 211, 238, 0.8);
+    }
+
+    .desc {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #cbd5e1;
+      margin-bottom: 30px;
+    }
+
+    .proof-box {
+      background: rgba(2, 6, 23, 0.75);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      border-radius: 16px;
+      padding: 20px;
+      text-align: left;
+      color: #d1d5db;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .proof-box span {
+      color: #22c55e;
+      font-weight: bold;
+    }
+
+    .footer {
+      margin-top: 28px;
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    .pulse {
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+      }
+      50% {
+        text-shadow: 0 0 30px rgba(34, 211, 238, 1);
+      }
+      100% {
+        text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="glow"></div>
+  <div class="glow2"></div>
+
+  <div class="card">
+    <div class="badge">AUTHORIZED SECURITY RESEARCH POC</div>
+
+    <h1>Subdomain Takeover</h1>
+
+    <h2 class="pulse">Security Research — <span class="name">Hug Bunter</span></h2>
+
+    <p class="desc">
+      This page is a harmless proof-of-concept created to validate a dangling
+      GitHub Pages DNS configuration during authorized security testing.
+    </p>
+
+    <div class="proof-box">
+      <p><span>PoC Status:</span> Successfully controlled via GitHub Pages</p>
+      <p><span>Impact:</span> Arbitrary content can be hosted on the trusted subdomain</p>
+      <p><span>Purpose:</span> Responsible disclosure and remediation support only</p>
+      <p><span>Action Required:</span> Remove dangling DNS record or properly verify/configure GitHub Pages</p>
+    </div>
+
+    <div class="footer">
+      No user data accessed • No malicious content hosted • Responsible disclosure only
+    </div>
+  </div>
+</body>
+</html>
